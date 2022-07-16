@@ -14,13 +14,13 @@ import java.util.logging.Level;
 public class ChatPreviewerMixin {
     @Inject(at=@At("HEAD"),method = "tryRequest",cancellable = true)
     public void noRequest(String message, CallbackInfo ci) {
-        Main.LOGGER.log(Level.CONFIG,"Client tried to request chatpreview from server");
+        // Main.LOGGER.log(Level.CONFIG,"Client tried to request chatpreview from server");
 
         ci.cancel();
     }
     @Inject(at=@At("HEAD"),method = "onResponse",cancellable = true)
     public void noModify(int id, Text text, CallbackInfo ci) {
-        Main.LOGGER.log(Level.CONFIG,"Server tried to modify chatpreview to "+text.toString());
+        // Main.LOGGER.log(Level.CONFIG,"Server tried to modify chatpreview to "+text.toString());
         ci.cancel();
     }
 }
