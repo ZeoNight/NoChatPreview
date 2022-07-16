@@ -8,7 +8,7 @@
     "ZeoNight"
   ],
   "contact": {},
-  "license": "GPL-3.0",
+  "license": "Unlicense",
   "icon": "assets/NoChatPreview/icon.png",
   "environment": "client",
   "entrypoints": {
